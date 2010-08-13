@@ -1,0 +1,20 @@
+### one time command:
+git remote add origin git@github.com:kblackma/demo_app.git
+
+### one time:
+git push origin master
+script/generate scaffold User name:string email:string
+rake db:migrate
+
+### run server:
+script/server
+git push git@heroku.com:dealontheway.git master
+git mv <filename1> <filename2>
+
+
+### scaffold generation scripts
+
+script/generate scaffold User name:string email:string
+rake db:migrate
+
+ruby script/generate scaffold Deal name:string content:string exp_date:date showclaimed:boolean user_id:integer
