@@ -1,0 +1,28 @@
+<p>
+  <b>Name:</b>
+  <%=h @deal.name %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%=h @deal.content %>
+</p>
+
+<p>
+  <b>Exp date:</b>
+  <%=h @deal.exp_date %>
+</p>
+
+<p>
+  <b>Showclaimed:</b>
+  <%=h @deal.showclaimed %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%=h @deal.user_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_deal_path(@deal) %> |
+<%= link_to 'Back', deals_path %>

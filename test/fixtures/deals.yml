@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  content: MyString
+  exp_date: 2010-08-13
+  showclaimed: false
+  user_id: 1
+
+two:
+  name: MyString
+  content: MyString
+  exp_date: 2010-08-13
+  showclaimed: false
+  user_id: 1

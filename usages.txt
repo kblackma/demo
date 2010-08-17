@@ -1,16 +1,60 @@
+Basic Git Steps
+1.git clone. This basically tells your local git to go out an pull the files from the server.
+2.Make your changes.
+3.git commit. This commits your files to your LOCAL repository, not the one on the server.
+4.git push. This “pushes” you committed changes up to the server.
+
+
+### one time command
+git init
+git config --global user.name "Kevin Blackman"
+git config --global user.email kevin@kevinblackman.com
+
+## create a .gitignore file that contains the files and directories/ that
+## you want git to ignore
+
+# add all files to the directory
+git add . 
+
+# or automatically commit all changed files
+git commit -a 
+# commit files pending commit change
+git commit 
+
+#The identity used for this commit is wrong, you can fix it with:
+git commit --amend --author='Kevin Blackman <kevin@kevinblackman.com>'
+
 ### one time command:
 git remote add origin git@github.com:kblackma/demo_app.git
 
 ### one time:
 git push origin master
+
+## afterwards just use
+git push
+
+### necessary ruby packages
+gem install rails
+gem install sqlite3-ruby 
+### ruby getting started : http://guides.rubyonrails.org/getting_started.html
+### ruby script/generate controller home index
+
+### generate controller name "home" with "index" action
+script/generate controller home index 
+rm public/index.html 
+notepad app/views/home/index.html.erb
+### add this above default route : 
+map.root :controller => "home"  ## above map.connect
+
+### run server:
+ruby script/server
+
+## scaffold generation
 script/generate scaffold User name:string email:string
 rake db:migrate
 
-### run server:
-script/server
-git push git@heroku.com:dealontheway.git master
+##herogit push git@heroku.com:dealontheway.git master
 git mv <filename1> <filename2>
-
 
 ### scaffold generation scripts
 
@@ -18,3 +62,7 @@ script/generate scaffold User name:string email:string
 rake db:migrate
 
 ruby script/generate scaffold Deal name:string content:string exp_date:date showclaimed:boolean user_id:integer
+rake db:migrate
+
+### has_many :class_name(s) // belongs_to :class_name
+

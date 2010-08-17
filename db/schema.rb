@@ -9,7 +9,27 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100812145726) do
+ActiveRecord::Schema.define(:version => 20100813161503) do
+
+  create_table "deals", :force => true do |t|
+    t.string   "name"
+    t.string   "content"
+    t.date     "exp_date"
+    t.boolean  "showclaimed"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "microposts", :force => true do |t|
+    t.string   "name"
+    t.string   "content"
+    t.date     "exp_date"
+    t.boolean  "showclaimed"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "name"
