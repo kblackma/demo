@@ -75,3 +75,17 @@ heroku db:push
 
 ## going to a new branch to create static pages
 git checkout -b static-pages
+script/generate controller Pages home contact
+
+## install testing framework
+gem install rspec
+gem install rspec-rails
+ruby script/generate rspec
+gem install autotest-rails -v 4.1.0
+## you can try installing growl to work with autotest -  but complicated on windows
+ script/generate rspec_controller Pages home contact
+## remove unit tests directory
+rm -rf tests
+## running the tests
+spec spec\  ## runs all the tests
+spec spec/controllers/   ## runs the controllers tests
