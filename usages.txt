@@ -66,3 +66,12 @@ rake db:migrate
 
 ### has_many :class_name(s) // belongs_to :class_name
 
+## HEROKU
+heroku create
+if heroku create does not create the remote then use
+git remote add heroku git@heroku.com:appname.git where <appname> is the name of the app in Heroku
+gem install taps
+heroku db:push
+
+## going to a new branch to create static pages
+git checkout -b static-pages
