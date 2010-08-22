@@ -89,3 +89,9 @@ rm -rf tests
 ## running the tests
 spec spec\  ## runs all the tests
 spec spec/controllers/   ## runs the controllers tests
+autospec ## run tests continually
+
+$ git add .
+$ git commit -am "Done with static pages"
+$ git checkout master
+$ git merge static-pages
