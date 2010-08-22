@@ -106,3 +106,51 @@ $ git checkout master
 $ git merge filling-in-layout
 $ git push
 $ git push heroku
+
+gitk --all  #view source control graph
+
+$ script/generate rspec_model User name:string email:string
+
+# this drops the table!
+$ rake db:rollback
+
+## annotate models
+$ gem install annotate-models -v 1.0.4
+# annotates the users model
+$ annotate users 
+
+## Making the name and email  attributes accessible.
+attr_accessible :name, :email
+
+## sandbox
+$ script/console --sandbox
+## tail the log in the cygwin bash shell
+tail -f log/development.log
+
+user = User.new(:name => "User 1", :email => "user1@dealontheway.com")
+User.create(:name => "A Nother", :email => "another@dealontheway.com")
+## update_attributes performs the update and save in one step
+user.update_attributes(:name => "User 1", :email => "user1dude@dealontheway.com")
+user.valid?
+user.errors.full_messages
+spec/models/user_spec.rb
+
+## removed the --colour option from spec\spec.opts
+
+### ensures that the data model from the development database, db/development.sqlite3, 
+is reflected in the test database, db/test.sqlite3. 
+$ rake db:test:prepare
+
+## so that autotest will use RSPEC
+set RSPEC=true
+autotest
+
+script/generate migration add_email_uniqueness_index
+rake db:migrate
+
+## development is the default environment
+script/console test # development etc.
+Rails.env, Rails.env.development? etc.
+script/server --environment production  ## runs server in production mode, not development
+
+
