@@ -95,3 +95,14 @@ $ git add .
 $ git commit -am "Done with static pages"
 $ git checkout master
 $ git merge static-pages
+
+### create simple new user controller
+$ script/generate rspec_controller Users new
+
+$ spec spec/
+$ git add .
+$ git commit -am "Finished layout and routes"
+$ git checkout master
+$ git merge filling-in-layout
+$ git push
+$ git push heroku
