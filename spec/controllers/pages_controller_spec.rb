@@ -55,7 +55,7 @@ describe PagesController do
 		end
 		it "should have the right title" do
 		  get 'help'
-		  response.should have_tag("title", @base_title +" | Help & Support")
+		  response.should have_tag("title", @base_title +" | Help &amp; Support")
 		end
 	end
 	
