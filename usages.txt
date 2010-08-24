@@ -153,4 +153,12 @@ script/console test # development etc.
 Rails.env, Rails.env.development? etc.
 script/server --environment production  ## runs server in production mode, not development
 
+$ script/generate migration add_password_to_users encrypted_password:string
+
+rake db:migrate
+rake db:test:prepare
+
+spec spec/models/user_spec.rb -e "should have an encrypted password attribute"
+
+gem install factory_girl -v 1.2.3
 
