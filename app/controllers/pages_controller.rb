@@ -22,7 +22,7 @@ class PagesController < ApplicationController
 
   def help
 	@base_title = "DealOnTheWay"
-	@title = "Help &amp; Support"
+	@title = "Help & Support"
   end  
 
 end
