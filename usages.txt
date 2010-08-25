@@ -162,3 +162,4 @@ spec spec/models/user_spec.rb -e "should have an encrypted password attribute"
 
 gem install factory_girl -v 1.2.3
 
+gem install faker -v 0.3.1
