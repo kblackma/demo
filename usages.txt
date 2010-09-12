@@ -2,7 +2,7 @@ Basic Git Steps
 1.git clone. This basically tells your local git to go out an pull the files from the server.
 2.Make your changes.
 3.git commit. This commits your files to your LOCAL repository, not the one on the server.
-4.git push. This ìpushesî you committed changes up to the server.
+4.git push. This ‚Äúpushes‚Äù you committed changes up to the server.
 
 
 ### one time command
@@ -39,6 +39,22 @@ gem install sqlite3-ruby
 ### ruby getting started : http://guides.rubyonrails.org/getting_started.html
 ### ruby script/generate controller home index
 
+
+##install heroku
+gem install heroku
+## add your SSH keys to your heroku account
+heroku keys
+# creates a new app on heroku
+heroku create 
+# use an existing app
+
+## HEROKU
+heroku create
+if heroku create does not create the remote then use
+git remote add heroku git@heroku.com:appname.git where <appname> is the name of the app in Heroku
+gem install taps
+heroku db:push
+
 ### generate controller name "home" with "index" action
 script/generate controller home index 
 rm public/index.html 
@@ -53,7 +69,8 @@ ruby script/server
 script/generate scaffold User name:string email:string
 rake db:migrate
 
-##herogit push git@heroku.com:dealontheway.git master
+##heroku
+git push git@heroku.com:dealontheway.git master
 git mv <filename1> <filename2>
 
 ### scaffold generation scripts
@@ -66,16 +83,12 @@ rake db:migrate
 
 ### has_many :class_name(s) // belongs_to :class_name
 
-## HEROKU
-heroku create
-if heroku create does not create the remote then use
-git remote add heroku git@heroku.com:appname.git where <appname> is the name of the app in Heroku
-gem install taps
-heroku db:push
+
 
 ## going to a new branch to create static pages
 git checkout -b static-pages
 script/generate controller Pages home contact
+
 
 ## install testing framework
 gem install rspec
@@ -90,6 +103,7 @@ rm -rf tests
 spec spec\  ## runs all the tests
 spec spec/controllers/   ## runs the controllers tests
 autospec ## run tests continually
+
 
 $ git add .
 $ git commit -am "Done with static pages"
@@ -163,3 +177,14 @@ spec spec/models/user_spec.rb -e "should have an encrypted password attribute"
 gem install factory_girl -v 1.2.3
 
 gem install faker -v 0.3.1
+
+## development environment is the default. To run the server in production:
+script/server --environment production
+## to run the console in a different environment
+script/console test
+## create a production database
+rake db:migrate RAILS_ENV=production
+
+
+### installting to use SQL server
+gem install activerecord-sqlserver-adapter 
