@@ -1,2 +1,9 @@
 will_paginate --version 2.3.12
 faker
+rspec
+rspec-rails
+autotest-rails -v 4.1.0
+factory_girl -v 1.2.3
+webrat -v 0.7.0
+launchy -v 0.3.5
+faker -v 0.3.1
